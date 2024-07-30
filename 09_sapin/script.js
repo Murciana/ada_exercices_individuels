@@ -31,15 +31,12 @@ function afficherRectangle(hauteur, largeur) {
  function afficherTriangleDroite(n) {
       // comment afficher des lignes qui "s'allongent" un peu plus à chaque itération ?
     n = afficherEtoiles(n)
-    let triangle 
-    let epine = "\\"
-    let totalEtoiles = ""
-
-    for (let etoile = 0; etoile < n.length; etoile++) {
+    let triangle = " "
     
-        totalEtoiles += n[etoile] + "\n"
-        triangle = n[etoile] + epine
-        console.log(triangle);
+      for (let etoile = 0; etoile < n.length; etoile++) {
+          triangle += n[etoile] 
+          console.log(triangle + "\\");
     }
  }
  afficherTriangleDroite(5) 
+
