@@ -31,7 +31,7 @@ function afficherRectangle(hauteur, largeur) {
     }
 
 }
-// afficherRectangle(5,8)
+afficherRectangle(5,8)
 
 //1.3 Afficher un triangle d'étoiles 
  function afficherTriangleDroite(n) {
