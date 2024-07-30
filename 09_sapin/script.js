@@ -5,25 +5,20 @@
 // 1.1 Afficher une ligne d'étoiles 
 function afficherEtoiles(n) {
     let etoiles = '*'
-    etoiles = etoiles.repeat(n) // renvoie nouvelle chaine de caractères qui contient le nombre de copie demandée, concaténées les unes aux autres.
-    console.log(etoiles);
+    return etoiles.repeat(n) // renvoie nouvelle chaine de caractères qui contient le nombre de copie demandée, concaténées les unes aux autres.
 }
-// afficherEtoiles(2)
-// afficherEtoiles(5)
+// console.log(afficherEtoiles(2))
 
 // 1.2 Afficher un carré d'étoiles 
-
 function afficherRectangle(hauteur, largeur) {
-     let rectangleEtoiles 
-    
-    let etoilesHauteur = '*'
-    etoilesHauteur = etoilesHauteur.repeat(hauteur)
+    let rectangleEtoiles 
+    let totalEtoiles = "";
+
+    let etoilesHauteur = afficherEtoiles(hauteur)
     let colonne = etoilesHauteur.split('')
 
-    let etoilesLargeur = '*'
-    etoilesLargeur = etoilesLargeur.repeat(largeur-1)
+    let etoilesLargeur = afficherEtoiles(largeur - 1)
 
-    let totalEtoiles = "";
     for (let etage = 0; etage < colonne.length; etage++) {
     totalEtoiles += colonne[etage] + "\n";
     rectangle = colonne[etage] + etoilesLargeur
@@ -31,7 +26,7 @@ function afficherRectangle(hauteur, largeur) {
     }
 
 }
-afficherRectangle(5,8)
+afficherRectangle(5,5)
 
 //1.3 Afficher un triangle d'étoiles 
  function afficherTriangleDroite(n) {
