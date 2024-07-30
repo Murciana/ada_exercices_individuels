@@ -12,16 +12,16 @@ function afficherEtoiles(n) {
 // 1.2 Afficher un carré d'étoiles 
 function afficherRectangle(hauteur, largeur) {
     let rectangleEtoiles 
-    let totalEtoiles = "";
+    let totalEtoiles = ""; // contiendra mon nombre total d'étoiles 
 
     let etoilesHauteur = afficherEtoiles(hauteur)
     let colonne = etoilesHauteur.split('')
 
-    let etoilesLargeur = afficherEtoiles(largeur - 1)
+    let etoilesLargeur = afficherEtoiles(largeur - 1) // on enlève 1 étoile pour ne pas additionner avec l'étoile de la colonne
 
-    for (let etage = 0; etage < colonne.length; etage++) {
-    totalEtoiles += colonne[etage] + "\n";
-    rectangle = colonne[etage] + etoilesLargeur
+    for (let etoile = 0; etoile < colonne.length; etoile++) { // pour chaque étage de ma colonne d'étoiles 
+    totalEtoiles += colonne[etoile] + "\n";                  //  j'ajoute une étoile à ma colonne et je reviens à la ligne 
+    rectangle = colonne[etoile] + etoilesLargeur            //   A cette colonne j'additionne le nombre d'étoiles pour la largeur 
     console.log(rectangle);
     }
 
