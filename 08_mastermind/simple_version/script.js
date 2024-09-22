@@ -5,7 +5,7 @@ Combinaison à deviner : 2 pions de couleurs différentes
 - Une fonction qui retourne true ou false si la bonne combinaison est trouvée ou non
 - Une fonction qui gère la partie (continuer tant que/fin si gagné)
 */
-let comboTests = 4
+let comboTests = 12
 let codemakerCombination = ["purple","yellow"]
 console.log("codeMaker's proposition: ",codemakerCombination);
 
@@ -26,23 +26,24 @@ function tryColors() {
 function checkCombination() {
     let codebreakerCombination = tryColors()
    
-        let wellPlaced = []; 
-        let missPlaced = [];
-        let notInCombo = [];  
+    let wellPlaced = []; 
+    let missPlaced = [];
+    let notInCombo = [];  
 
-        for (let i = 0; i < codebreakerCombination.length; i++) { 
-            if (codemakerCombination[i] == codebreakerCombination[i]) { 
+    for (let i = 0; i < codebreakerCombination.length; i++) { 
+        if (codemakerCombination[i] == codebreakerCombination[i]) { 
             wellPlaced.push(codebreakerCombination[i]);       
-            }	else if (!codemakerCombination.includes(codebreakerCombination[i])){
+        } else if (!codemakerCombination.includes(codebreakerCombination[i])){
             notInCombo.push(codebreakerCombination[i])
-            } else {
-                missPlaced.push(codebreakerCombination[i])        
-                }
-            }        
-        comboTests --
-        console.log(`You have ${comboTests} tests left`);        
-        return { wellPlaced: wellPlaced, missPlaced: missPlaced, notInCombo: notInCombo }
-        }       
+        } else {
+            missPlaced.push(codebreakerCombination[i])        
+        }
+    }        
+    comboTests --
+    console.log(`You have ${comboTests} tests left`);        
+    
+    return { wellPlaced: wellPlaced, missPlaced: missPlaced, notInCombo: notInCombo }
+}       
 
 function gamePlay() {
     let result = checkCombination()
@@ -61,3 +62,6 @@ function gamePlay() {
     }   
 }
 gamePlay()
+
+/* ETAPE 2 - COMBINAISONS 4 COULEURS ET 8 CHOIX POSSIBLES
+*/
