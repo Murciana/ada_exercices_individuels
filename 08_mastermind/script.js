@@ -5,7 +5,7 @@ Combinaison à deviner : 2 pions de couleurs différentes
 - Une fonction qui retourne true ou false si la bonne combinaison est trouvée ou non
 - Une fonction qui gère la partie (continuer tant que/fin si gagné)
 */
-let comboTests = 12
+let comboTests = 4
 let codemakerCombination = ["purple","yellow"]
 console.log("codeMaker's proposition: ",codemakerCombination);
 
@@ -25,12 +25,7 @@ function tryColors() {
 
 function checkCombination() {
     let codebreakerCombination = tryColors()
-
-    if (codemakerCombination.join() === codebreakerCombination.join()){
-        console.log("you won");     
-        return true
-
-    } else {        
+   
         let wellPlaced = []; 
         let missPlaced = [];
         let notInCombo = [];  
@@ -43,18 +38,26 @@ function checkCombination() {
             } else {
                 missPlaced.push(codebreakerCombination[i])        
                 }
-            }
-        console.log({ wellPlaced: wellPlaced, missPlaced: missPlaced, notInCombo: notInCombo });
-        
+            }        
         comboTests --
-        console.log(comboTests);
-        
+        console.log(`You have ${comboTests} tests left`);        
         return { wellPlaced: wellPlaced, missPlaced: missPlaced, notInCombo: notInCombo }
-        }
-        
-}
-checkCombination()
+        }       
 
 function gamePlay() {
-
+    let result = checkCombination()
+    console.log("Your result is : ", result);
+      
+    if (result.wellPlaced.length === codemakerCombination.length) {
+        console.log("you won");        
+    }
+    else if (comboTests === 0 ) {
+        console.log("you lose");
+    }
+    else {
+        // Si la combinaison est incorrecte mais qu'il reste des essais
+        console.log(`You found ${result.wellPlaced.length} well placed color(s), try again!`)         
+        gamePlay(); // Relancer un nouveau tour
+    }   
 }
+gamePlay()
