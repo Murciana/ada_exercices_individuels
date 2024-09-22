@@ -1,0 +1,74 @@
+const monMot = "Hello, world"; 
+const arrayMonMot = [];
+function getLatinCharacterList(texte) { // Retourne un tableau contenant chaque caractère
+    for (let i = 0; i < monMot.length; i++) { // Boucle qui va parcourir chaque caractère de monMot
+      arrayMonMot.push(monMot[i]);
+    }
+    console.log(arrayMonMot); // ["H", "e", "l", "l", "o", ",", " ", "w", "o", "r", "l", "d"]
+}
+getLatinCharacterList()
+/**** Méthode alternative 
+const monMot = "Hello, world";
+const arrayMonMot = [];
+function getLatinCharacterList(texte) { // Retourne un tableau contenant chaque caractère
+    for (let i = 0; i < monMot.length; i++) { // Boucle qui va parcourir chaque caractère de monMot
+      arrayMonMot.push(monMot[i]);
+    }
+    console.log(arrayMonMot); // donne ["H", "e", "l", "l", "o", ",", " ", "w", "o", "r", "l", "d"]
+}
+getLatinCharacterList() 
+****/
+
+
+const latinToMorse = {
+	'A':'.-',
+	'B':'-...',
+	'C':'-.-.',
+	'D':'-..',
+	'E':'.',
+	'F':'..-.',
+	'G':'--.',
+	'H':'....',
+	'I':'..',
+	'J':'.---',
+	'K':'-.-',
+	'L':'.-..',
+	'M':'--',
+	'N':'-.',
+	'O':'---',
+	'P':'.--.',
+	'Q':'--.-',
+	'R':'.-.',
+	'S':'...',
+	'T':'-',
+	'U':'..-',
+	'V':'...-',
+	'W':'.--',
+	'X':'-..-',
+	'Y':'-.--',
+	'Z':'--..'
+}
+
+function translateLatinCharacter(latin, morse) { // convertir un caractère latin en caractère morse 
+    const lettre = "A";
+    const lettreMorse = latinToMorse[lettre];
+    console.log(latinToMorse["A"]); // Affiche ".-"
+    console.log()
+}
+
+translateLatinCharacter()
+
+function translateLatinCharacter2(latin, morse) {
+const convertToMorse = (str) => {
+    return str.toUpperCase().split("").map(el => {
+       return morseCode[el] ? morseCode[el] : el;
+    }).join("");
+
+}
+}
+function encode() 
+
+getLatinCharacterList()
+
+
+

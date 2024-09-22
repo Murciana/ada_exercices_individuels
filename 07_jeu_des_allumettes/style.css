@@ -1,0 +1,30 @@
+* {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    padding: 50px;
+    width: 50%;
+    margin: auto;
+    background-color: #9D6669;
+    color: white;
+
+}
+
+.game-rules {
+    border: 1px solid #9D6669;
+    padding: 50px;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.players-number,
+.match-choice {
+    /* padding: 20px; */
+    width: 50%;
+    margin: auto;
+}
+
